@@ -1,0 +1,175 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eaf4fb;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    padding: 6rem 1rem;
+    background:
+        url("/parsa.png") no-repeat center/cover,
+        rgba(255, 255, 255, 0.7);
+    color: #333;
+}
+
+header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.6);
+    z-index: 1;
+}
+
+header h1,
+header p {
+    z-index: 2;
+    position: relative;
+}
+
+.cta {
+    text-align: center;
+    padding: 2rem;
+}
+
+.cta button {
+    padding: 0.8rem 1.5rem;
+    margin: 0 0.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.cta .learn-more {
+    background-color: #4e9fec;
+    color: #fff;
+}
+
+.cta .get-started {
+    background-color: #fff;
+    border: 1px solid #4e9fec;
+    color: #4e9fec;
+}
+
+.notepad {
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.notepad h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.notepad-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.notepad-card {
+    background-color: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.notepad-card:hover {
+    transform: translateY(-5px);
+}
+
+.notepad-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.notepad-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter {
+    background-color: #fffbea;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.newsletter button {
+    padding: 0.8rem 1.5rem;
+    background-color: #4e9fec;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #f4f4f4;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+footer a {
+    color: #4e9fec;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* نسخه‌ی ریسپانسیو برای عرض کمتر از 550px */
+@media (max-width: 550px) {
+    .newsletter form {
+        flex-direction: column;
+        gap: 0.5rem;
+        align-items: center;
+    }
+
+    .newsletter input[type="text"],
+    .newsletter input[type="email"],
+    .newsletter button {
+        width: 90%;
+    }
+}
